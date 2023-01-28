@@ -7,12 +7,13 @@ module.exports = {
 		extend: {
 			colors: {
 				primary: "#FFFFFF",
-				background: "#1E1E1E",
+				background: "#fffbf5",
 				accent: "#FFE849",
 			  },
 			  fontFamily: {
-				Rob: ["Roboto", "sans-serif", ...defaultTheme.fontFamily.sans],
-				questrial: ["Questrial", "sans-serif"]
+				Rob: ["Roboto", "sans-serif"],
+				questrial: ["Questrial", "sans-serif"],
+				poppins : ["Poppins", "sans-serif" ]
 			  },
 			height: {
 				"3/25" : "12%",

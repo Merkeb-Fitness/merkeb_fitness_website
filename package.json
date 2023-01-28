@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "@astrojs/tailwind": "^3.0.0",
+    "@fontsource/poppins": "^4.5.10",
     "@fontsource/questrial": "^4.5.11",
     "@fontsource/roboto": "^4.5.8",
     "astro": "^2.0.0",

@@ -3,6 +3,8 @@ import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
 import Hero from '../components/HeroSection.astro';
 import Navbar from '../components/Navbar.astro';
+import "@fontsource/questrial";
+import "@fontsource/roboto";
 ---
 
 <Layout title="Welcome to Astro.">
@@ -14,4 +16,132 @@ import Navbar from '../components/Navbar.astro';
 			<Hero/>
 		</div>
 	</main>
+	<section class="bg-background">
+		<div class="flex flex-col space-y-3 justify-center items-center pt-28">
+			<div class="font-questrial font-normal leading-10 text-[40px]">Our Menu</div>
+			<div class="font-Rob font-light text-lg leading-5">choose from our healthy, nutritios & delicious items</div>
+		</div>
+		<div class="pt-16 px-20">
+			<div class="grid grid-cols-3 gap-4">
+				<Card />
+				<Card />
+				<Card />
+				<Card />
+				<Card />
+				<Card />
+			</div>
+		</div>
+		<div class="flex justify-center items-center py-20 ">
+			<button class="bg-accent font-Rob font-semibold rounded-xl text-lg w-52 h-14 text-center">View All Meals</button>
+		</div>
+	</section>
+	<section class="bg-primary">
+		<div class="py-20 px-20 flex items-baseline space-x-4 justify-center">
+			<p class=" font-questrial font-normal text-[40px] leading-[56px]">Whether you want to
+				<div class="font-poppins font-bold text-5xl leading-[68.3px]">Build a Muscle
+					<div><img src="/assets/line.svg" /></div>
+				</div> 
+			</p>
+		</div>
+		<div class="flex justify-center items-center space-x-10 px-20 pb-20">
+			<div class="">
+				<img src="assets/fat-lose.jpg" class="" />
+			</div>
+			<div class="space-y-7">
+				<p class="font-Rob font-medium text-2xl leading-[28px]">We got you covered!</p>
+				<p class="max-w-lg font- font-extralight text-xl leading-5">Our meals are designed to help you build lean muscle mass and get stronger. Each meal comes pre portioned with high quality proteins, carbs and low fats.
+				Our talented team will cook & delivery fresh high quality ready-to-eat meals to your doorstep, All you have to do is eat! & get jacked.</p>
+				<p class="font-Rob font-medium text-2xl leading-7">Call to 0967187469 to Order</p>
+			</div>
+		</div>
+	</section>
+	<section class="bg-background">
+		<div class="py-20 px-20 ">
+			<p class="flex items-center justify-center font-questrial font-normal text-[40px] leading-[56px]">How it works</p>
+			<div class="grid grid-cols-2 px-24 py-8">
+				<div class="bg-primary relative flex flex-col justify-center items-center space-y-10 w-[461px] h-[365px] rounded-xl">
+					<p class="font-questrial font-normal text-2xl leading-8">On-demand</p>
+					<p class="max-w-xs text-center font-Rob font-light text-lg leading-5">You just call and order the meals you want and we’ll cook and deliver it to you</p>
+					<button class="bg-accent w-52 h-14 rounded-lg font-Rob font-semibold text-lg leading-5">See our menu</button>
+					<div class="absolute left-6 -top-6 bottom-0 w-1 bg-[#00D8B1]"></div>
+				</div>
+				<div class="bg-primary relative flex flex-col justify-center items-center space-y-10 w-[461px] h-[365px] rounded-xl">
+					<p class="font-questrial font-normal text-2xl leading-8">Weekly Subscribtion</p>
+					<p class="max-w-xs text-center font-Rob font-light text-lg leading-5">You can subscribe on a weekly basis by choosing a minimum of 6 meals per week to a maximum of 15 meals.</p>
+					<button class="bg-accent w-52 h-14 rounded-lg font-Rob font-semibold text-lg leading-5">See our menu</button>
+					<div class="absolute left-6 -top-6 bottom-0 w-1 bg-[#FF7A13]"></div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="bg-[#D9D9D9]">
+		<div class="p-20 flex flex-col justify-center items-center text-center space-y-8">
+			<p class="font-questrial font-normal text-4xl leading-[51px] max-w-sm">Get in the best shape of your life</p>
+			<button class="bg-accent w-52 h-12 font-Rob text-lg font-semibold rounded-xl">Order Now</button>
+		</div>
+	</section>
+	<section class="bg-background">
+		<div class="p-20 flex flex-col items-center justify-center space-y-6">
+			<p class="font-questrial font-normal pb-6 text-4xl leading-[51px]">You can contact us</p>
+			<div class="flex space-x-6">
+				<div class="flex flex-col space-y-2">
+					<div class="uppercase text-center font-questrial font-normal leading-[28px]">Give us a call on</div>
+					<div class="w-80 h-32 bg-white rounded-lg">
+						<div class="flex items-center justify-center space-x-6 w-full h-full">
+							<img src="assets/call.png" />
+							<div class="font-questrial font-normal text-xl leading-[28px] ">
+								<div>0967187469</div>
+								<div>0927351054</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="flex flex-col space-y-2">
+					<div class="uppercase text-center font-questrial font-normal leading-[28px]">Follow us on</div>
+					<div class="w-80 h-32 bg-white rounded-lg">
+						<div class="flex items-center uppercase font-questrial text-xs leading-4 text-center w-full h-full justify-center space-x-4">
+							<div class="space-y-2">
+								<img src="assets/Tg.png"/>
+								<div>Telegram</div>
+							</div>
+							<div class="space-y-2">
+								<img src="assets/Fb.png"/>
+								<div>Facebook</div>
+							</div>
+							<div class="space-y-2">
+								<img src="assets/Ig.png"/>
+								<div>Instagram</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
 </Layout>
+<style>
+	.img-wrap {
+  width: 400px;
+  height: 350px;
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  margin: 0;
+  background-color: red;
+  border-radius: 0px 60px 60px 0px;
+  z-index: 50;
+}
+.clipimage {
+  display: block;
+  z-index: ;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-height: 100%;
+  min-width: 100%;
+  transform: translate(-50%, -50%);
+  /* border-radius: 1000px; */
+  -webkit-clip-path: polygon(0 0, 100% 0%, 100% 100%, 26% 100%);
+clip-path: polygon(0 0, 100% 0%, 100% 100%, 26% 100%);
+}
+</style>
