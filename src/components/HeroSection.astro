@@ -1,0 +1,23 @@
+---
+import "@fontsource/questrial"
+export interface Props {}
+
+const {} = Astro.props;
+---
+<div class="h-full">
+    <!-- <div class="h-4 bg-red-600 shadow-lg shadow-red-800 z-50"></div> -->
+    <div class="pl-[100px] w-full h-full pt-[3px]">
+        <div class="w-full h-full bg-cover bg-center bg-[url('/assets/hero-web.jpg')]">
+            <div class="w-1/2 h-full flex flex-col justify-center items-center bg-gradient-to-r from-white">
+                <div class="space-y-[10px]">
+                    <div class="text-black font-questrial font-normal text-5xl leading-[71px]">Freshly cooked meals for a lean & healthy body</div>
+                    <div class="font-Rob font-light text-lg leading-5 text-black">Ready-to-eat meals delivered to your door</div>
+                    <div><button class="w-52 h-14 mt-8 bg-accent font-Rob font-semibold text-lg text-center leading-5 rounded-[10px]">See menu</button></div>
+                </div>
+                <div class="flex justify-end w-full ">
+                    <img src="assets/go-down.png" class="absolute bottom-12" />
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

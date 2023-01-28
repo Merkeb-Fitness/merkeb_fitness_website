@@ -12,7 +12,12 @@ module.exports = {
 			  },
 			  fontFamily: {
 				Rob: ["Roboto", "sans-serif", ...defaultTheme.fontFamily.sans],
+				questrial: ["Questrial", "sans-serif"]
 			  },
+			height: {
+				"3/25" : "12%",
+				"22/25" : "88%"
+			}
 		},
 	},
 	plugins: [],
