@@ -5,6 +5,10 @@ import Hero from '../components/HeroSection.astro';
 import Navbar from '../components/Navbar.astro';
 import "@fontsource/questrial";
 import "@fontsource/roboto";
+import Services from '../components/Services';
+
+
+
 ---
 
 <Layout title="Welcome to Astro.">
@@ -35,26 +39,7 @@ import "@fontsource/roboto";
 			<button class="bg-accent font-Rob font-semibold rounded-xl text-lg w-52 h-14 text-center">View All Meals</button>
 		</div>
 	</section>
-	<section class="bg-primary">
-		<div class="py-20 px-20 flex items-baseline space-x-4 justify-center">
-			<p class=" font-questrial font-normal text-[40px] leading-[56px]">Whether you want to
-				<div class="font-poppins font-bold text-5xl leading-[68.3px]">Build a Muscle
-					<div><img src="/assets/line.svg" /></div>
-				</div> 
-			</p>
-		</div>
-		<div class="flex justify-center items-center space-x-10 px-20 pb-20">
-			<div class="">
-				<img src="assets/fat-lose.jpg" class="" />
-			</div>
-			<div class="space-y-7">
-				<p class="font-Rob font-medium text-2xl leading-[28px]">We got you covered!</p>
-				<p class="max-w-lg font- font-extralight text-xl leading-5">Our meals are designed to help you build lean muscle mass and get stronger. Each meal comes pre portioned with high quality proteins, carbs and low fats.
-				Our talented team will cook & delivery fresh high quality ready-to-eat meals to your doorstep, All you have to do is eat! & get jacked.</p>
-				<p class="font-Rob font-medium text-2xl leading-7">Call to 0967187469 to Order</p>
-			</div>
-		</div>
-	</section>
+	<Services client:load />
 	<section class="bg-background">
 		<div class="py-20 px-20 ">
 			<p class="flex items-center justify-center font-questrial font-normal text-[40px] leading-[56px]">How it works</p>
