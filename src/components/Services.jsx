@@ -31,20 +31,20 @@ const Services = () => {
 			switchImage()
 		}, 3000);
 		return () => clearInterval(interval)
-	}, [currentImage])
+	}, [count])
 
     return (
         <section className="bg-primary">
 		<div className="py-20 px-20 flex items-baseline space-x-4 justify-center w-full">
 			<p className=" font-questrial font-normal text-[40px] leading-[56px]">Whether you want to 
 			</p>
-			<div className="font-poppins font-bold text-5xl leading-[68.3px]">{data[currentImage].title}
+			<div className="font-poppins font-bold text-5xl leading-[68.3px]">{data[count].title}
 				<img src="/assets/line.svg" />
 			</div>
 		</div>
 		<div className="flex justify-center items-center space-x-10 px-20 pb-20">
 			<div className="">
-				<img src={data[currentImage].url} alt={data[currentImage].alt} className="" />
+				<img src={data[count].url} alt={data[count].alt} className="" />
 			</div>
 			<div className="space-y-7">
 				<p className="font-Rob font-medium text-2xl leading-[28px]">We got you covered!</p>
