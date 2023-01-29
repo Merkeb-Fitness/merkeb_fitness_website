@@ -6,8 +6,8 @@ import Navbar from '../components/Navbar.astro';
 import "@fontsource/questrial";
 import "@fontsource/roboto";
 import Services from '../components/Services';
-
-
+import menu from "../../data"
+console.log(menu);
 
 ---
 
@@ -27,12 +27,12 @@ import Services from '../components/Services';
 		</div>
 		<div class="pt-16 px-20">
 			<div class="grid grid-cols-3 gap-4">
-				<Card />
-				<Card />
-				<Card />
-				<Card />
-				<Card />
-				<Card />
+				{
+					menu.map((item) => {
+						// <Card  image={item.image} name={item.name} price={item.price} alt={item.alt} protien={item.protien} fat={item.protien} carbs={item.carbs} calories={item.calories} fat={item.fat} />
+						<div>hey</div>
+					})
+				}
 			</div>
 		</div>
 		<div class="flex justify-center items-center py-20 ">

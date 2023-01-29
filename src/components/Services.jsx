@@ -23,7 +23,7 @@ const Services = () => {
 		} else if(count == 1) {
 			setCount(0)
 		}
-		return currentImage
+		return count
 	}
 
 	useEffect(()=>{
