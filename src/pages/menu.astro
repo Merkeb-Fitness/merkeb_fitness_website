@@ -1,44 +1,47 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card';
-import Hero from '../components/HeroSection.astro';
-import Navbar from '../components/Navbar.astro';
 import "@fontsource/questrial";
 import "@fontsource/roboto";
-import Services from '../components/Services';
+import Layout from "../layouts/Layout.astro";
+import Navbar from '../components/Navbar.astro';
+import Card from '../components/Card';
 import menu from "../../data"
-
 ---
-
-<Layout title="Welcome to Astro.">
-	<main class="h-screen">
-		<div class="h-3/25">
-			<Navbar/>
-		</div>
-		<div class="h-22/25">
-			<Hero/>
-		</div>
-	</main>
-	<section class="bg-background">
-		<div class="flex flex-col space-y-3 justify-center items-center pt-28">
-			<div class="font-questrial font-normal leading-10 text-[40px]">Our Menu</div>
-			<div class="font-Rob font-light text-lg leading-5">choose from our healthy, nutritios & delicious items</div>
-		</div>
-		<div class="pt-16 px-20">
-			<div class="grid grid-cols-3 gap-4">
-				{
-					menu.map((item) => (
-						<Card client:load image={item.image} name={item.name} price={item.price} alt={item.alt} protien={item.protien} fat={item.protien} carbs={item.carbs} calories={item.calories} fat={item.fat} />
-					))
-				}
-			</div>
-		</div>
-		<div class="flex justify-center items-center py-20 ">
-			<button class="bg-accent font-Rob font-semibold rounded-xl text-lg w-52 h-14 text-center">View All Meals</button>
-		</div>
-	</section>
-	<Services client:load />
-	<section class="bg-background">
+<Layout title="Enjoy our Menu">
+    <div class="h-20">
+        <Navbar />
+    </div>
+    <section class="bg-background min-h-screen p-20">
+        <p class="text-center font-questrial font-normal text-[40px] leading-[56px]">Our Menu</p>
+        <p class="text-center font-Rob font-light text-lg leading-5">choose from our healthy, nutritious, & delicios menu items</p>
+        <p class="font-questrial pt-20 text-[32px] font-normal leading-[45px]">Meals</p>
+        <div class="w-[87px] bg-accent h-1 mb-6"></div>
+        <div class="grid grid-cols-3 gap-4">
+            {
+                menu.map((item) => (
+                    <Card client:load image={item.image} name={item.name} price={item.price} alt={item.alt} protien={item.protien} fat={item.protien} carbs={item.carbs} calories={item.calories} fat={item.fat} />
+                ))
+            }
+        </div>
+        <p class="font-questrial pt-20 text-[32px] font-normal leading-[45px]">Shakes</p>
+        <div class="w-[105px] bg-accent h-1 mb-6"></div>
+        <div class="grid grid-cols-3 gap-4">
+            {
+                menu.map((item) => (
+                    <Card client:load image={item.image} name={item.name} price={item.price} alt={item.alt} protien={item.protien} fat={item.protien} carbs={item.carbs} calories={item.calories} fat={item.fat} />
+                ))
+            }
+        </div>
+        <p class="font-questrial pt-20 text-[32px] font-normal leading-[45px]">Snacks</p>
+        <div class="w-[110px] bg-accent h-1 mb-6"></div>
+        <div class="grid grid-cols-3 gap-4">
+            {
+                menu.map((item) => (
+                    <Card client:load image={item.image} name={item.name} price={item.price} alt={item.alt} protien={item.protien} fat={item.protien} carbs={item.carbs} calories={item.calories} fat={item.fat} />
+                ))
+            }
+        </div>
+    </section>
+    <section class="bg-background">
 		<div class="py-20 px-20 ">
 			<p class="flex items-center justify-center font-questrial font-normal text-[40px] leading-[56px]">How it works</p>
 			<div class="grid grid-cols-2 px-24 py-8">
@@ -57,7 +60,7 @@ import menu from "../../data"
 			</div>
 		</div>
 	</section>
-	<section class="bg-[#D9D9D9]">
+    <section class="bg-[#D9D9D9]">
 		<div class="p-20 flex flex-col justify-center items-center text-center space-y-8">
 			<p class="font-questrial font-normal text-4xl leading-[51px] max-w-sm">Get in the best shape of your life</p>
 			<button class="bg-accent w-52 h-12 font-Rob text-lg font-semibold rounded-xl">Order Now</button>
@@ -102,29 +105,3 @@ import menu from "../../data"
 		</div>
 	</section>
 </Layout>
-<style>
-	.img-wrap {
-  width: 400px;
-  height: 350px;
-  position: relative;
-  display: inline-block;
-  overflow: hidden;
-  margin: 0;
-  background-color: red;
-  border-radius: 0px 60px 60px 0px;
-  z-index: 50;
-}
-.clipimage {
-  display: block;
-  z-index: ;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  min-height: 100%;
-  min-width: 100%;
-  transform: translate(-50%, -50%);
-  /* border-radius: 1000px; */
-  -webkit-clip-path: polygon(0 0, 100% 0%, 100% 100%, 26% 100%);
-clip-path: polygon(0 0, 100% 0%, 100% 100%, 26% 100%);
-}
-</style>
