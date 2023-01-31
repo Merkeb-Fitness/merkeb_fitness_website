@@ -2,7 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card';
 import Hero from '../components/HeroSection.astro';
-import Navbar from '../components/Navbar.astro';
+import Navbar from '../components/Navbar';
 import "@fontsource/questrial";
 import "@fontsource/roboto";
 import Services from '../components/Services';
@@ -10,10 +10,10 @@ import menu from "../../data"
 
 ---
 
-<Layout title="Welcome to Astro.">
+<Layout title="HOME | Merkeb Fitness">
 	<main class="h-screen">
 		<div class="h-3/25">
-			<Navbar/>
+				<Navbar client:load/>
 		</div>
 		<div class="h-22/25">
 			<Hero/>
@@ -24,8 +24,8 @@ import menu from "../../data"
 			<div class="font-questrial font-normal leading-10 text-[40px]">Our Menu</div>
 			<div class="font-Rob font-light text-lg leading-5">choose from our healthy, nutritios & delicious items</div>
 		</div>
-		<div class="pt-16 px-20">
-			<div class="grid grid-cols-3 gap-4">
+		<div class="pt-16 md:px-20 px-5">
+			<div class="grid md:grid-cols-3 grid-cols-1 gap-4">
 				{
 					menu.map((item) => (
 						<Card client:load image={item.image} name={item.name} price={item.price} alt={item.alt} protien={item.protien} fat={item.protien} carbs={item.carbs} calories={item.calories} fat={item.fat} />
@@ -39,16 +39,16 @@ import menu from "../../data"
 	</section>
 	<Services client:load />
 	<section class="bg-background">
-		<div class="py-20 px-20 ">
+		<div class="py-20 md:px-20 px-0">
 			<p class="flex items-center justify-center font-questrial font-normal text-[40px] leading-[56px]">How it works</p>
-			<div class="grid grid-cols-2 px-24 py-8">
-				<div class="bg-primary relative flex flex-col justify-center items-center space-y-10 w-[461px] h-[365px] rounded-xl">
+			<div class="grid md:grid-cols-2 grid-cols-1 gap-6 md:px-24 px-5 py-8">
+				<div class="bg-primary relative flex flex-col justify-center items-center space-y-10 md:w-[461px] w-[360px] h-[385px] md:h-[365px] rounded-xl">
 					<p class="font-questrial font-normal text-2xl leading-8">On-demand</p>
 					<p class="max-w-xs text-center font-Rob font-light text-lg leading-5">You just call and order the meals you want and we’ll cook and deliver it to you</p>
 					<button class="bg-accent w-52 h-14 rounded-lg font-Rob font-semibold text-lg leading-5">See our menu</button>
 					<div class="absolute left-6 -top-6 bottom-0 w-1 bg-[#00D8B1]"></div>
 				</div>
-				<div class="bg-primary relative flex flex-col justify-center items-center space-y-10 w-[461px] h-[365px] rounded-xl">
+				<div class="bg-primary relative flex flex-col justify-center items-center space-y-10 md:w-[461px] w-[388px] h-[385px] md:h-[365px] rounded-xl">
 					<p class="font-questrial font-normal text-2xl leading-8">Weekly Subscribtion</p>
 					<p class="max-w-xs text-center font-Rob font-light text-lg leading-5">You can subscribe on a weekly basis by choosing a minimum of 6 meals per week to a maximum of 15 meals.</p>
 					<button class="bg-accent w-52 h-14 rounded-lg font-Rob font-semibold text-lg leading-5">See our menu</button>
@@ -66,7 +66,7 @@ import menu from "../../data"
 	<section class="bg-background">
 		<div class="p-20 flex flex-col items-center justify-center space-y-6">
 			<p class="font-questrial font-normal pb-6 text-4xl leading-[51px]">You can contact us</p>
-			<div class="flex space-x-6">
+			<div class="flex flex-col md:flex md:flex-row space-x-6">
 				<div class="flex flex-col space-y-2">
 					<div class="uppercase text-center font-questrial font-normal leading-[28px]">Give us a call on</div>
 					<div class="w-80 h-32 bg-white rounded-lg">
