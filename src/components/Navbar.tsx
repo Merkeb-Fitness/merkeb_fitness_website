@@ -2,15 +2,26 @@
 import { useEffect, useState } from "react";
 // export interface Props {}
 // import "@fontsource/roboto";
+import { Drawer } from 'antd';
 
 
 const Navbar = () => {
     const [windowWidth, setWindowWidth] = useState<Number>();
+    const [open, setOpen] = useState(false);
     console.log("screen width", windowWidth);
 
     useEffect(()=>{
         setWindowWidth(window.innerWidth);
     },[])
+
+    const showDrawer = () => {
+        console.log("clicked")
+        setOpen(true);
+    };
+
+    const onClose = () => {
+        setOpen(false);
+    };
 
     return (
         <>
@@ -28,14 +39,21 @@ const Navbar = () => {
                     </ul>
                 </nav>
             ) : (
-                <nav className="flex justify-between p-4">
-                    <div>
-                        <img src="/assets/merkeb-fitness-logo-mobile.png" />
-                    </div>
-                    <div>
-                        <img src="/assets/drawer-icon.svg" />
-                    </div>
-                </nav>
+                <>
+                    <nav className="flex justify-between p-4">
+                        <div>
+                            <img src="/assets/merkeb-fitness-logo-mobile.png" />
+                        </div>
+                        <button onClick={showDrawer}>
+                            <img src="/assets/drawer-icon.svg" />
+                        </button>
+                    </nav>
+                    <Drawer title="Basic Drawer" placement="right" onClose={onClose} open={open}>
+                        <p>Some contents...</p>
+                        <p>Some contents...</p>
+                        <p>Some contents...</p>
+                    </Drawer>
+                </>
             )
             }
         </>
