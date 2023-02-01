@@ -23,7 +23,7 @@ const Card = ({name, image, alt, protien, fat, carbs, calories, price} : Props) 
 					<div className="bg-white rounded-tr-md rounded-br-md w-20 h-8 font-Rob font-medium text-sm leading-4 text-center py-2">{`${calories}"g Kcl"`}</div>
 				</div>
 			</div>
-			<div className="px-6 pt-4 pb-2 flex justify-between">
+			<div className="px-6 pt-4 pb-4 flex justify-between">
 				<div>
 						<div className="font-questrial font-normal text-xl">{name}</div>
 						<div className="flex space-x-4">

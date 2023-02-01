@@ -5,6 +5,8 @@ import Layout from "../layouts/Layout.astro";
 import Navbar from '../components/Navbar';
 import Card from '../components/Card';
 import menu from "../../data"
+import ContactSection from "../components/ContactSection.astro";
+import ServiceIntroSection from "../components/ServiceIntroSection.astro";
 ---
 <Layout title="Enjoy our Menu">
     <div class="h-20">
@@ -41,67 +43,12 @@ import menu from "../../data"
             }
         </div>
     </section>
-    <section class="bg-background">
-		<div class="py-20 md:px-20 px-0">
-			<p class="flex items-center justify-center font-questrial font-normal text-[40px] leading-[56px]">How it works</p>
-			<div class="grid md:grid-cols-2 grid-cols-1 gap-6 md:px-24 px-5 py-8">
-				<div class="bg-primary relative flex flex-col justify-center items-center space-y-10 md:w-[461px] w-[360px] h-[385px] md:h-[365px] rounded-xl">
-					<p class="font-questrial font-normal text-2xl leading-8">On-demand</p>
-					<p class="max-w-xs text-center font-Rob font-light text-lg leading-5">You just call and order the meals you want and we’ll cook and deliver it to you</p>
-					<button class="bg-accent w-52 h-14 rounded-lg font-Rob font-semibold text-lg leading-5">See our menu</button>
-					<div class="absolute left-6 -top-6 bottom-0 w-1 bg-[#00D8B1]"></div>
-				</div>
-				<div class="bg-primary relative flex flex-col justify-center items-center space-y-10 md:w-[461px] w-[388px] h-[385px] md:h-[365px] rounded-xl">
-					<p class="font-questrial font-normal text-2xl leading-8">Weekly Subscribtion</p>
-					<p class="max-w-xs text-center font-Rob font-light text-lg leading-5">You can subscribe on a weekly basis by choosing a minimum of 6 meals per week to a maximum of 15 meals.</p>
-					<button class="bg-accent w-52 h-14 rounded-lg font-Rob font-semibold text-lg leading-5">See our menu</button>
-					<div class="absolute left-6 -top-6 bottom-0 w-1 bg-[#FF7A13]"></div>
-				</div>
-			</div>
-		</div>
-	</section>
+    <ServiceIntroSection />
     <section class="bg-[#D9D9D9]">
 		<div class="p-20 flex flex-col justify-center items-center text-center space-y-8">
 			<p class="font-questrial font-normal text-4xl leading-[51px] max-w-sm">Get in the best shape of your life</p>
 			<button class="bg-accent w-52 h-12 font-Rob text-lg font-semibold rounded-xl">Order Now</button>
 		</div>
 	</section>
-	<section class="bg-background">
-		<div class="p-20 flex flex-col items-center justify-center space-y-6">
-			<p class="font-questrial font-normal pb-6 text-4xl leading-[51px]">You can contact us</p>
-			<div class="flex flex-col md:flex md:flex-row space-x-6">
-				<div class="flex flex-col space-y-2">
-					<div class="uppercase text-center font-questrial font-normal leading-[28px]">Give us a call on</div>
-					<div class="w-80 h-32 bg-white rounded-lg">
-						<div class="flex items-center justify-center space-x-6 w-full h-full">
-							<img src="assets/call.png" />
-							<div class="font-questrial font-normal text-xl leading-[28px] ">
-								<div>0967187469</div>
-								<div>0927351054</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="flex flex-col space-y-2">
-					<div class="uppercase text-center font-questrial font-normal leading-[28px]">Follow us on</div>
-					<div class="w-80 h-32 bg-white rounded-lg">
-						<div class="flex items-center uppercase font-questrial text-xs leading-4 text-center w-full h-full justify-center space-x-4">
-							<div class="space-y-2">
-								<img src="assets/Tg.png"/>
-								<div>Telegram</div>
-							</div>
-							<div class="space-y-2">
-								<img src="assets/Fb.png"/>
-								<div>Facebook</div>
-							</div>
-							<div class="space-y-2">
-								<img src="assets/Ig.png"/>
-								<div>Instagram</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
+	<ContactSection />
 </Layout>
