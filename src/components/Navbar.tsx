@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 // export interface Props {}
 // import "@fontsource/roboto";
 import { Drawer } from 'antd';
+import "../styles/navbar.css"
 
 
 const Navbar = () => {
@@ -41,17 +42,15 @@ const Navbar = () => {
             ) : (
                 <>
                     <nav className="flex justify-between p-4">
-                        <div>
-                            <img src="/assets/merkeb-fitness-logo-mobile.png" />
-                        </div>
-                        <button onClick={showDrawer}>
-                            <img src="/assets/drawer-icon.svg" />
-                        </button>
+                        <a href="/"><img src="/assets/merkeb-fitness-logo-mobile.png" /></a>
+                        <img onClick={showDrawer} src="/assets/drawer-icon.svg" />
                     </nav>
-                    <Drawer title="Basic Drawer" placement="right" onClose={onClose} open={open}>
-                        <p>Some contents...</p>
-                        <p>Some contents...</p>
-                        <p>Some contents...</p>
+                    <Drawer  placement="right" onClose={onClose} open={open}>
+                        <div className="flex flex-col justify-center px-10 mb-44 h-full font-Rob font-medium text-4xl leading-[42px] space-y-12">
+                            <a href="/">Home</a>
+                            <a href="/menu">Menu</a>
+                            <a href="/">Contact</a>
+                        </div>
                     </Drawer>
                 </>
             )
