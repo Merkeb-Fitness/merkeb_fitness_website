@@ -17,7 +17,7 @@ import ServiceIntroSection from "../components/ServiceIntroSection.astro";
         <p class="text-center font-Rob font-light text-lg leading-5">choose from our healthy, nutritious, & delicios menu items</p>
         <p class="font-questrial pt-20 text-[32px] font-normal leading-[45px]">Meals</p>
         <div class="w-[87px] bg-accent h-1 mb-6"></div>
-        <div class="grid md:grid-cols-3 grid-cols-1 gap-4">
+        <div class="flex flex-col justify-center items-center space-y-6 md:grid md:grid-cols-3 md:gap-4">
             {
                 menu.map((item) => (
                     <Card client:load image={item.image} name={item.name} price={item.price} alt={item.alt} protien={item.protien} fat={item.protien} carbs={item.carbs} calories={item.calories} fat={item.fat} />
@@ -26,7 +26,7 @@ import ServiceIntroSection from "../components/ServiceIntroSection.astro";
         </div>
         <p class="font-questrial pt-20 text-[32px] font-normal leading-[45px]">Shakes</p>
         <div class="w-[105px] bg-accent h-1 mb-6"></div>
-        <div class="grid md:grid-cols-3 grid-cols-1 gap-4">
+        <div class="flex flex-col justify-center items-center space-y-6 md:grid md:grid-cols-3 md:gap-4">
             {
                 menu.map((item) => (
                     <Card client:load image={item.image} name={item.name} price={item.price} alt={item.alt} protien={item.protien} fat={item.protien} carbs={item.carbs} calories={item.calories} fat={item.fat} />
@@ -35,7 +35,7 @@ import ServiceIntroSection from "../components/ServiceIntroSection.astro";
         </div>
         <p class="font-questrial pt-20 text-[32px] font-normal leading-[45px]">Snacks</p>
         <div class="w-[110px] bg-accent h-1 mb-6"></div>
-        <div class="grid md:grid-cols-3 grid-cols-1 gap-4">
+        <div class="flex flex-col justify-center items-center space-y-6 md:grid md:grid-cols-3 md:gap-4">
             {
                 menu.map((item) => (
                     <Card client:load image={item.image} name={item.name} price={item.price} alt={item.alt} protien={item.protien} fat={item.protien} carbs={item.carbs} calories={item.calories} fat={item.fat} />
