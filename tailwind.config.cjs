@@ -11,7 +11,7 @@ module.exports = {
 				accent: "#FFE849",
 			  },
 			  fontFamily: {
-				Rob: ["Roboto", "sans-serif"],
+				// Rob: ["Roboto", "sans-serif"],
 				questrial: ["Questrial", "sans-serif"],
 				poppins : ["Poppins", "sans-serif" ]
 			  },
