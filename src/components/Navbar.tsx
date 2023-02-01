@@ -10,7 +10,7 @@ const Navbar = () => {
 
     useEffect(()=>{
         setWindowWidth(window.innerWidth);
-    })
+    },[])
 
     return (
         <>

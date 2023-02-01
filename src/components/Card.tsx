@@ -13,7 +13,7 @@ export interface Props {
 
 const Card = ({name, image, alt, protien, fat, carbs, calories, price} : Props) => {
 	return (
-		<div className="max-w-sm md:w-96 md:h-[349px] w-[388px] rounded-lg overflow-hidden shadow-lg">
+		<div className="max-w-sm md:w-96 md:h-[349px] w-[388px] my-4 rounded-lg overflow-hidden shadow-lg">
 			<div className="w-full h-[268px] relative">
 				<img className="object-cover relative" src={image} alt={alt} />
 				<div className="absolute bottom-6 left-0 space-y-1">

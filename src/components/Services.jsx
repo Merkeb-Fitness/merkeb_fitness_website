@@ -35,20 +35,19 @@ const Services = () => {
 
     return (
         <section className="bg-primary">
-		<div className="py-20 px-20 flex items-baseline space-x-4 justify-center w-full">
-			<p className=" font-questrial font-normal text-[40px] leading-[56px]">Whether you want to 
-			</p>
+		<div className="py-20 md:px-20 md:flex md:flex-row flex flex-col justify-center items-center md:items-baseline space-x-4 md:justify-center w-full">
+			<p className="font-questrial font-normal md:text-[40px] text-[20px] leading-7 md:leading-[56px]">Whether you want to</p>
 			<div className="font-poppins font-bold text-5xl leading-[68.3px]">{data[count].title}
 				<img src="/assets/line.svg" />
 			</div>
 		</div>
-		<div className="flex justify-center items-center space-x-10 px-20 pb-20">
+		<div className="md:flex md:flex-row md:justify-center md:items-center flex flex-col md:space-x-10 space-y-6 md:px-20 px-2 pb-20">
 			<div className="">
 				<img src={data[count].url} alt={data[count].alt} className="" />
 			</div>
 			<div className="space-y-7">
 				<p className="font-Rob font-medium text-2xl leading-[28px]">We got you covered!</p>
-				<p className="max-w-lg font- font-extralight text-xl leading-5">Our meals are designed to help you build lean muscle mass and get stronger. Each meal comes pre portioned with high quality proteins, carbs and low fats.
+				<p className="max-w-lg font-Rob font-extralight text-xl leading-5">Our meals are designed to help you build lean muscle mass and get stronger. Each meal comes pre portioned with high quality proteins, carbs and low fats.
 				Our talented team will cook & delivery fresh high quality ready-to-eat meals to your doorstep, All you have to do is eat! & get jacked.</p>
 				<p className="font-Rob font-medium text-2xl leading-7">Call to 0967187469 to Order</p>
 			</div>
