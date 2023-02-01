@@ -36,7 +36,7 @@ const Card = ({name, image, alt, protien, fat, carbs, calories, price} : Props) 
 							}
 						</div>
 				</div>
-				<div className="font-Rob font-medium text-xl">{price}</div>
+				<div className="font-Rob font-medium text-xl">Br.{price}</div>
 			</div>
 		</div>
 	)
