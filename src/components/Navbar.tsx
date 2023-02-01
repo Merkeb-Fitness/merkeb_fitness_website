@@ -47,9 +47,9 @@ const Navbar = () => {
                     </nav>
                     <Drawer  placement="right" onClose={onClose} open={open}>
                         <div className="flex flex-col justify-center px-10 mb-44 h-full font-Rob font-medium text-4xl leading-[42px] space-y-12">
-                            <a href="/">Home</a>
-                            <a href="/menu">Menu</a>
-                            <a href="/">Contact</a>
+                            <a href="/" className="hover:bg-accent">Home</a>
+                            <a href="/menu" className="hover:bg-accent">Menu</a>
+                            <a href="/" className="hover: bg-accent">Contact</a>
                         </div>
                     </Drawer>
                 </>
